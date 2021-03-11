@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 // Creare un oggetto che descriva uno studente con le
 // seguenti proprietà: nome, cognome e età.
 
@@ -10,7 +12,7 @@ var student = {
 // Stampare a schermo attraverso il for in tutte le proprietà.
 
 for (var key in student) {
- console.log(student[key]);
+ console.log(key + ' ' + student[key]);
 }
 
 
@@ -38,11 +40,10 @@ var classeStudenti =
 
   ]
 
-  // ???
   
-  // for (var i = 0; i < classeStudenti.length; i++) {
-  //  console.log(classeStudenti[i]);
-  // }
+   for (var i = 0; i < classeStudenti.length; i++) {
+    console.log((classeStudenti[i]['nome']) + ' ' + (classeStudenti[i]['cognome']));
+   }
 
 
 
@@ -53,7 +54,7 @@ var classeStudenti =
 
 var studentName = prompt('Inserisci il tuo nome');
 var surname = prompt('Inserisci il tuo cognome');
-var age = prompt('Inserisci a tua età'),
+var age = prompt('Inserisci la tua età'),
 
 newStudent = {
    "nome" : studentName,
@@ -66,3 +67,5 @@ classeStudenti.push(newStudent);
 for (var key in classeStudenti) {
  console.log(classeStudenti[key]);
 }
+
+})
